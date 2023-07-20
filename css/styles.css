@@ -441,7 +441,6 @@ Contact
 
 .contact-form {
   display: flex;
-  background-color: red;
   max-width: 28rem;
 
 }
@@ -501,6 +500,47 @@ Contact
 Gallery
 ===============
 */
+.gallery-img-container{
+  position: relative;
+  background: var(--clr-primary-5);
+}
+
+.gallery-icon{
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 5rem;
+  color: var(--clr-white);
+  opacity: 0;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.gallery-img{
+  object-fit: cover;
+  height: 17rem;
+  transition: var(--transition);
+}
+.gallery-img-container:hover .gallery-img{
+  opacity: 50%;
+}
+
+.gallery-img-container:hover .gallery-icon{
+  opacity: 1;
+}
+
+@media  screen and (min-width: 768px) {
+  .gallery-center {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .gallery-img-container{
+    flex: 0 0 25%;
+  }
+}
 
 /*
 =============== 
